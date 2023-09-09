@@ -17,7 +17,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(bg-cincin.jpg);
+    background-image: url(img/bg-cincin.jpg);
     backdrop-filter: grayscale;
     background-position: center;
     background-repeat: no-repeat;
@@ -131,7 +131,7 @@ body {
 
 
 .home {
-    background-image: url(bg-bunga.jpg);
+    background-image: url(img/bg-bunga.jpg);
     background-size: cover;
     min-height: 100vh;
     margin-top: -6rem;
@@ -141,7 +141,9 @@ body {
 
 
 .home h2, 
-.story h2 {
+.story h2,
+.story h2,
+.gallery h2 {
     color: rgb(247, 247, 28);
     font-family: 'Great Vibes', cursive;
     font-size: 5rem;
@@ -259,12 +261,13 @@ body {
 
 
 /* Story */
-.story {
+.story, .gallery {
     padding-top: 10rem;
     padding-bottom: 8rem;
+    background-color: whitesmoke;
 }
 
-.story span {
+.story span, .gallery span {
     text-transform: uppercase;
     color: #666;
     font-size: 0.9rem;
@@ -273,7 +276,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.story p {
+.story p, .gallery p {
     font-size: 1rem;
     font-weight: 300;
 }
@@ -380,6 +383,11 @@ body {
 }
 
 
+/* Gallery */
+.gallery {
+    background-color: #eaeaea;
+}
+
 
 
 
@@ -409,6 +417,36 @@ body {
         
     }
 
+
+    .timeline::before {
+        left: 60px;
+    }
+
+    .timeline li .timeline-image {
+        left: 15px;
+        margin-left: 45px;
+        top: 16px;
+    }
+
+    .timeline li .timeline-panel {
+        width: calc(100% - 200px);
+        float: right;
+    }
+
+    .timeline li .timeline-panel::before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+    }
+
+    .timeline li .timeline-panel::after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -13px;
+        right: auto;
+    }
+
 }
 
   /* Tablet */
@@ -432,6 +470,11 @@ body {
         overflow: hidden;
     } */
     
+
+    .timeline li .timeline-image {
+        width: 140px;
+        height: 140px;
+    }
 }
 
   /* Mobile Phopne */
@@ -444,6 +487,25 @@ body {
         padding: 45px;
         margin: 3px;
         
+    }
+
+    .timeline li .timeline-image {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    .timeline li .timeline-panel {
+        width: -65%;
+        transform: translateX(-20px);
+    }
+
+    .timeline li .timeline-panel::before {
+        top: 30px;
+    }
+
+    .timeline li .timeline-panel::after {
+        top: 31px;
     }
     
 }
