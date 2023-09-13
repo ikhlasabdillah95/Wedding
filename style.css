@@ -7,7 +7,7 @@
 body {
     font-size: 1.2rem;
     font-family: 'Work Sans', sans-serif;
-    min-height: 4000px;
+    /* min-height: 10000px; */
 }
 
 .hero::before {
@@ -46,9 +46,10 @@ body {
 }
 
 .hero p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1.4rem;    
-    color: rgba(236, 211, 236, 1);
-    
+    color: #ff6f52;
+    font-weight: 2re;
 }
 
 .hero a {
@@ -68,6 +69,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Arial', sans-serif;
+    color: var(--pink)!important;
   }
   .simply-countdown > .simply-section {
     width: 50px;
@@ -90,7 +92,7 @@ body {
     align-items: center;
     float: left;
     margin: 15px;
-    background: var(--pink);
+    background: rgba(255, 255, 255, 1);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     border-radius: 50%;
 
@@ -109,12 +111,16 @@ body {
 .mynavbar {
     background-color: rgba(255, 255, 255, 0.3)!important;
     backdrop-filter: blur(4px);
+    
 }
 
 .mynavbar .offcanvas {
     height: 100vh;
 }
 
+.mynavbar .navbar-brand {
+    caret-color: rgb(24, 24, 24);
+}
 
 .mynavbar .navbar-brand, 
 .mynavbar .offcanvas-tittle {
@@ -123,15 +129,18 @@ body {
     font-weight: bold;
 }
 
+.mynavbar .offcanvas-body a:hover {
+    background-color: #909;
+    color: white;
+}
+
 .mynavbar .nav-link {
     /* font-weight: 600; */
     text-transform: uppercase;
 }
 
-
-
 .home {
-    background-image: url(img/bg-bunga.jpg);
+    background-color: white;
     background-size: cover;
     min-height: 100vh;
     margin-top: -6rem;
@@ -143,23 +152,25 @@ body {
 .home h2, 
 .story h2,
 .story h2,
-.gallery h2 {
-    color: rgb(247, 247, 28);
+.gallery h2,
+.rsvp h2,
+.gifts {
+    color: var(--pink);
     font-family: 'Great Vibes', cursive;
     font-size: 5rem;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 
 .home h3 {
-    color: rgb(247, 247, 28);
+    color: gold;
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
 .home p {
     font-size: 1.1rem;
-    color: #ffff;
+    color: #9999;
 }
 
 
@@ -170,18 +181,18 @@ body {
 .home .couple h3 {
     font-family: 'Great Vibes';
     font-size: 2.4rem;
-    color: yellow;
+    color: #f08080;
 }
 
 .home .couple img {
     width: 100%;
 }
 
-/* .biocuwi {
+.biocuwi {
     position: relative;
     left: 35%;
     bottom: 38%;
-} */
+}
 
 .home .heart {
     width: 50px;
@@ -213,12 +224,26 @@ body {
     color: var(--pink);
     font-family: 'Great Vibes';
     font-size: 5rem;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .info .alamat {
     font-size: 1.1rem;
 
+}
+
+.info .peta {
+    margin-bottom: 50px;
+}
+
+.info .peta img {
+    width: 500px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(120px);
+    border: 2px solid var(--pink);
 }
 
 .info a {
@@ -261,22 +286,23 @@ body {
 
 
 /* Story */
-.story, .gallery {
+.story, .gallery, .rsvp, .gifts {
     padding-top: 10rem;
     padding-bottom: 8rem;
-    background-color: whitesmoke;
+    background-color: whitesmoke!important;
 }
 
-.story span, .gallery span {
+.story span, .gallery span, .gifts span {
     text-transform: uppercase;
     color: #666;
     font-size: 0.9rem;
     letter-spacing: 1px;
     display: block;
     margin-bottom: 1rem;
+    font-family: arial;
 }
 
-.story p, .gallery p {
+.story p, .gallery p, .rsvp p, .gifts p {
     font-size: 1rem;
     font-weight: 300;
 }
@@ -384,14 +410,78 @@ body {
 
 
 /* Gallery */
-.gallery {
+.gallery,
+.rsvp {
     background-color: #eaeaea;
 }
 
 
 
 
+.rsvp {
+    background-color: var(--bg);
+}
 
+.rsvp h2 {
+    font-size: 4.5rem;
+
+}
+
+.rsvp p {
+    color: #999;
+}
+
+.rsvp form label {
+    color: #999;
+}
+
+.rsvp button {
+    background-color: var(--pink);
+    color: white;
+    border: 1px solid var(--pink);
+}
+
+.rsvp button:hover {
+    background-color: white;
+    color: var(--pink);
+    border: 1px solid var(--pink);
+}
+
+/* GIFTS */
+.gifts ul li {
+    font-size: 12px;
+    font-family: arial, sans-serif;
+}
+.gifts h2 {
+    font-size: 5rem;
+}
+
+/* footer */
+footer {
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+    background-color: #999;
+    color: white;
+}
+
+footer a {
+    color: var(--bg);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer li {
+    list-style: none;
+    display: inline;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    color: var(--pink);
+    
+}
   /* Media Query */
 
 
