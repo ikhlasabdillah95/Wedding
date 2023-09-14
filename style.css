@@ -10,7 +10,7 @@ body {
     /* min-height: 10000px; */
 }
 
-.hero::before {
+.hero /*::before*/ {
     content: '';
     position: absolute;
     top: 0;
